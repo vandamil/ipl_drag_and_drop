@@ -1,0 +1,226 @@
+<html>
+  <body>
+    <!-- Set up your HTML here -->
+    <head>
+        <style>
+            #myInput {
+ /* Add a search icon to input */
+  background-position: 10px 12px; /* Position the search icon */
+  background-repeat: no-repeat; /* Do not repeat the icon image */
+  width: 100%; /* Full-width */
+  font-size: 16px; /* Increase font-size */
+  padding: 12px 20px 12px 40px; /* Add some padding */
+  border: 1px solid #ddd; /* Add a grey border */
+  margin-bottom: 12px; /* Add some space below the input */
+}
+            *{
+                margin: 0;
+                padding: 0;
+                font-family: 'Poppins', sans-serif;
+                box-sizing: border-box;
+                text-align: center;
+                list-style-type:none;
+                
+            }
+            .container {
+                width: 100%;
+                height: 700px;
+                /* min-height: 100vh; */
+                background: #FAF3F0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            #left {
+                width: 400px;
+                height: 570px;
+                margin: 20px;
+                /* border-radius: 10%; */
+                /* border: 2px solid #fff; */
+                background: #D4E2D4;
+                /* overflow: hidden;
+                overflow-y: scroll; */
+                box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+            
+              }
+            #right {
+                position: relative;
+                top: -20px;
+                width: 300px;
+                height: 255px;
+                margin: 20px;
+                background: #FFCACC;
+                /* border: 2px dashed #fff; */
+                overflow: hidden;
+                box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+                /* overflow-y: scroll; */
+           }
+           #right1 {
+                position: relative;
+                top: 22px;
+                width: 300px;
+                height: 255px;
+                margin: 20px;
+                background: #FFCACC;
+                /* border: 2px dashed #fff; */
+                overflow: hidden;
+                box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+                /* overflow-y: scroll; */
+            }
+            .list1{
+              background: #e91e63;
+                height: 30px;
+                margin: 20px;
+                box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+                /* border-radius: 20%; */
+                color: #fff;
+                padding-top: 5px;
+                /* display: flex; */
+                /* align-items: center; */
+                cursor: grab;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div id="left">
+                <!-- <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.."> -->
+                <ul id="list">
+                    <li class="list1" draggable="true">BATTING</li>
+                    <li class="list1" draggable="true">BOWLING</li>
+                    <li class="list1" draggable="true">FIELDING</li> 
+                    
+                </ul>
+            </div>
+
+            <div id="sp">
+              <div id="right"></div>
+              <div id="right1"></div>
+            </div>
+            
+          
+
+
+        </div>
+    <script>
+        let lists = document.getElementsByClassName("list1");
+        let rightBox = document.getElementById("right");
+        let right1Box = document.getElementById("right1");
+        let leftBox = document.getElementById("left");
+        let players_skill = ["",""]
+
+        for(list of lists){
+            list.addEventListener("dragstart", function(e){
+                let selected = e.target;
+
+                rightBox.addEventListener("dragover",function(e){
+                    e.preventDefault();
+                });
+                rightBox.addEventListener("drop",function(e){
+                    rightBox.appendChild(selected);
+                    selected = null;
+                    var right_box_val = document.querySelector('#right .list1').innerHTML;
+                    players_skill[0]=right_box_val;
+        sendDataToPython({
+          value:players_skill ,
+          dataType: "json",});
+                });
+                right1Box.addEventListener("dragover",function(e){
+                    e.preventDefault();
+                });
+                right1Box.addEventListener("drop",function(e){
+                    right1Box.appendChild(selected);
+                    selected = null;
+                    var right_box_val1 = document.querySelector('#right1 .list1').innerHTML;
+                    
+                    players_skill[1]=right_box_val1;
+        sendDataToPython({
+          value:players_skill,
+          dataType: "json",});
+        });
+
+                leftBox.addEventListener("dragover",function(e){
+                    e.preventDefault();
+                });
+                leftBox.addEventListener("drop",function(e){
+                    leftBox.appendChild(selected);
+                    selected = null;
+                })
+            })
+
+      }
+        
+
+//         function myFunction() {
+//   let input = document.getElementById('myInput').value
+//   input = input.toLowerCase();
+//   let x = document.querySelectorAll('#list .list1');
+
+//   for (i = 0; i < x.length; i++) {
+//     if (!x[i].innerHTML.toLowerCase().includes(input)) {
+//       x[i].style.display = "none";
+//     }
+//     else {
+//       x[i].style.display = "list-item";
+//     }
+//   }
+// }
+
+      // ----------------------------------------------------
+      // Just copy/paste these functions as-is:
+
+      function sendMessageToStreamlitClient(type, data) {
+        var outData = Object.assign({
+          isStreamlitMessage: true,
+          type: type,
+        }, data);
+        window.parent.postMessage(outData, "*");
+      }
+
+      function init() {
+        sendMessageToStreamlitClient("streamlit:componentReady", {apiVersion: 1});
+      }
+
+      function setFrameHeight(height) {
+        sendMessageToStreamlitClient("streamlit:setFrameHeight", {height: height});
+      }
+
+      // The `data` argument can be any JSON-serializable value.
+      function sendDataToPython(data) {
+        sendMessageToStreamlitClient("streamlit:setComponentValue", data);
+      }
+
+      // ----------------------------------------------------
+      // Now modify this part of the code to fit your needs:
+
+      var myInput = document.getElementById("myInput");
+
+      
+   
+
+      // data is any JSON-serializable value you sent from Python,
+      // and it's already deserialized for you.
+      function onDataFromPython(event) {
+        if (event.data.type !== "streamlit:render") return;
+        myInput.value = event.data.args.my_input_value;  // Access values sent from Python here!
+      }
+
+
+
+      // Hook things up!
+      window.addEventListener("message", onDataFromPython);
+      init();
+
+      // Hack to autoset the iframe height.
+      window.addEventListener("load", function() {
+        window.setTimeout(function() {
+          setFrameHeight(document.documentElement.clientHeight)
+        }, 0);
+      });
+
+      // Optionally, if the automatic height computation fails you, give this component a height manually
+      // by commenting out below:
+      // setFrameHeight(200);
+    </script>
+  </body>
+</html>

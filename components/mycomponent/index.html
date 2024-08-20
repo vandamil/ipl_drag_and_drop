@@ -1,0 +1,234 @@
+<html>
+  <body>
+    <!-- Set up your HTML here -->
+    <head>
+        <style>
+            #myInput {
+ /* Add a search icon to input */
+  background-position: 10px 12px; /* Position the search icon */
+  background-repeat: no-repeat; /* Do not repeat the icon image */
+  width: 100%; /* Full-width */
+  font-size: 16px; /* Increase font-size */
+  padding: 12px 20px 12px 40px; /* Add some padding */
+  border: 1px solid #ddd; /* Add a grey border */
+  margin-bottom: 12px; /* Add some space below the input */
+              
+}
+            *{
+                margin: 0;
+                padding: 0;
+                font-family: 'Poppins', sans-serif;
+                box-sizing: border-box;
+                text-align: center;
+                list-style-type:none;
+                
+            }
+            .container {
+                width: 100%;
+                height: 700px;
+                min-height: 100vh;
+                background: #FAF3F0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            #left{
+                width: 450px;
+                height: 570px;
+                float: left;
+                margin: 20px;
+                background: #D4E2D4;
+                /* border: 2px solid #fff; */
+                overflow: hidden;
+                overflow-y: scroll;
+                box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+              }
+            #sp{
+              float: right;
+              
+            }
+           #right {
+                position: relative;
+                top: -20px;
+                width: 300px;
+                height: 255px;
+                margin: 20px;
+                
+                box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+                /* border: 2px dashed #fff; */
+                overflow: hidden;
+                background: #FFCACC;
+                /* overflow-y: scroll; */
+           }
+           #right1 {
+                position: relative;
+                top: 22px;
+                width: 300px;
+                height: 255px;
+                margin: 20px;
+                box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+                /* border: 0.5px dashed #fff; */
+                overflow: hidden;
+                background: #FFCACC;
+                /* overflow-y: scroll; */
+            }
+            .list1{
+                background: #e91e63;
+                height: 30px;
+                margin: 20px;
+                box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+                /* border-radius: 20%; */
+                color: #fff;
+                padding-top: 5px;
+                /* display: flex; */
+                /* align-items: center; */
+                cursor: grab;
+
+  /* margin: 0 3px; */
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+          <div id="sp">
+
+            <div id="right"></div>
+            <div id="right1"></div>
+          </div>
+
+            <div id="left">
+                <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
+                <ul id="list">
+                    <li class="list1" draggable="true">A Ashish Reddy</li> <li class="list1" draggable="true">A Badoni</li> <li class="list1" draggable="true">A Chandila</li> <li class="list1" draggable="true">A Chopra</li> <li class="list1" draggable="true">A Choudhary</li> <li class="list1" draggable="true">A Dananjaya</li> <li class="list1" draggable="true">A Flintoff</li> <li class="list1" draggable="true">A Kamboj</li> <li class="list1" draggable="true">A Kumble</li> <li class="list1" draggable="true">A Manohar</li> <li class="list1" draggable="true">A Mishra</li> <li class="list1" draggable="true">A Mithun</li> <li class="list1" draggable="true">A Mukund</li> <li class="list1" draggable="true">A Nehra</li> <li class="list1" draggable="true">A Nel</li> <li class="list1" draggable="true">A Nortje</li> <li class="list1" draggable="true">A Raghuvanshi</li> <li class="list1" draggable="true">A Singh</li> <li class="list1" draggable="true">A Symonds</li> <li class="list1" draggable="true">A Tomar</li> <li class="list1" draggable="true">A Uniyal</li> <li class="list1" draggable="true">A Zampa</li> <li class="list1" draggable="true">AA Bilakhia</li> <li class="list1" draggable="true">AA Chavan</li> <li class="list1" draggable="true">AA Jhunjhunwala</li> <li class="list1" draggable="true">AA Kazi</li> <li class="list1" draggable="true">AA Kulkarni</li> <li class="list1" draggable="true">AA Noffke</li> <li class="list1" draggable="true">AB Agarkar</li> <li class="list1" draggable="true">AB Barath</li> <li class="list1" draggable="true">AB Dinda</li> <li class="list1" draggable="true">AB McDonald</li> <li class="list1" draggable="true">AB de Villiers</li> <li class="list1" draggable="true">AC Blizzard</li> <li class="list1" draggable="true">AC Gilchrist</li> <li class="list1" draggable="true">AC Thomas</li> <li class="list1" draggable="true">AC Voges</li> <li class="list1" draggable="true">AD Hales</li> <li class="list1" draggable="true">AD Mascarenhas</li> <li class="list1" draggable="true">AD Mathews</li> <li class="list1" draggable="true">AD Nath</li> <li class="list1" draggable="true">AD Russell</li> <li class="list1" draggable="true">AF Milne</li> <li class="list1" draggable="true">AG Murtaza</li> <li class="list1" draggable="true">AG Paunikar</li> <li class="list1" draggable="true">AJ Finch</li> <li class="list1" draggable="true">AJ Hosein</li> <li class="list1" draggable="true">AJ Turner</li> <li class="list1" draggable="true">AJ Tye</li> <li class="list1" draggable="true">AK Markram</li> <li class="list1" draggable="true">AL Menaria</li> <li class="list1" draggable="true">AM Nayar</li> <li class="list1" draggable="true">AM Rahane</li> <li class="list1" draggable="true">AM Salvi</li> <li class="list1" draggable="true">AN Ahmed</li> <li class="list1" draggable="true">AN Ghosh</li> <li class="list1" draggable="true">AP Dole</li> <li class="list1" draggable="true">AP Majumdar</li> <li class="list1" draggable="true">AP Tare</li> <li class="list1" draggable="true">AR Bawne</li> <li class="list1" draggable="true">AR Patel</li> <li class="list1" draggable="true">AS Joseph</li> <li class="list1" draggable="true">AS Rajpoot</li> <li class="list1" draggable="true">AS Raut</li> <li class="list1" draggable="true">AS Roy</li> <li class="list1" draggable="true">AS Yadav</li> <li class="list1" draggable="true">AT Carey</li> <li class="list1" draggable="true">AT Rayudu</li> <li class="list1" draggable="true">AU Rashid</li> <li class="list1" draggable="true">AUK Pathan</li> <li class="list1" draggable="true">AV Wankhade</li> <li class="list1" draggable="true">Abdul Basith</li> <li class="list1" draggable="true">Abdul Samad</li> <li class="list1" draggable="true">Abdur Razzak</li> <li class="list1" draggable="true">Abhishek Sharma</li> <li class="list1" draggable="true">Abishek Porel</li> <li class="list1" draggable="true">Akash Deep</li> <li class="list1" draggable="true">Akash Madhwal</li> <li class="list1" draggable="true">Akash Singh</li> <li class="list1" draggable="true">Aman Hakim Khan</li> <li class="list1" draggable="true">Anand Rajan</li> <li class="list1" draggable="true">Anirudh Singh</li> <li class="list1" draggable="true">Ankit Sharma</li> <li class="list1" draggable="true">Ankit Soni</li> <li class="list1" draggable="true">Anmolpreet Singh</li> <li class="list1" draggable="true">Anuj Rawat</li> <li class="list1" draggable="true">Anureet Singh</li> <li class="list1" draggable="true">Arjun Tendulkar</li> <li class="list1" draggable="true">Arshad Khan</li> <li class="list1" draggable="true">Arshad Khan (2)</li> <li class="list1" draggable="true">Arshdeep Singh</li> <li class="list1" draggable="true">Ashutosh Sharma</li> <li class="list1" draggable="true">Atharva Taide</li> <li class="list1" draggable="true">Avesh Khan</li> <li class="list1" draggable="true">Azhar Mahmood</li> <li class="list1" draggable="true">Azmatullah Omarzai</li> <li class="list1" draggable="true">B Akhil</li> <li class="list1" draggable="true">B Aparajith</li> <li class="list1" draggable="true">B Chipli</li> <li class="list1" draggable="true">B Geeves</li> <li class="list1" draggable="true">B Indrajith</li> <li class="list1" draggable="true">B Kumar</li> <li class="list1" draggable="true">B Laughlin</li> <li class="list1" draggable="true">B Lee</li> <li class="list1" draggable="true">B Sai Sudharsan</li> <li class="list1" draggable="true">B Stanlake</li> <li class="list1" draggable="true">B Sumanth</li> <li class="list1" draggable="true">BA Bhatt</li> <li class="list1" draggable="true">BA Stokes</li> <li class="list1" draggable="true">BAW Mendis</li> <li class="list1" draggable="true">BB McCullum</li> <li class="list1" draggable="true">BB Samantray</li> <li class="list1" draggable="true">BB Sran</li> <li class="list1" draggable="true">BCJ Cutting</li> <li class="list1" draggable="true">BE Hendricks</li> <li class="list1" draggable="true">BJ Haddin</li> <li class="list1" draggable="true">BJ Hodge</li> <li class="list1" draggable="true">BJ Rohrer</li> <li class="list1" draggable="true">BMAJ Mendis</li> <li class="list1" draggable="true">BR Dunk</li> <li class="list1" draggable="true">BR Sharath</li> <li class="list1" draggable="true">BW Hilfenhaus</li> <li class="list1" draggable="true">Basil Thampi</li> <li class="list1" draggable="true">Bipul Sharma</li> <li class="list1" draggable="true">C Ganapathy</li> <li class="list1" draggable="true">C Green</li> <li class="list1" draggable="true">C Madan</li> <li class="list1" draggable="true">C Munro</li> <li class="list1" draggable="true">C Nanda</li> <li class="list1" draggable="true">C Sakariya</li> <li class="list1" draggable="true">C de Grandhomme</li> <li class="list1" draggable="true">CA Ingram</li> <li class="list1" draggable="true">CA Lynn</li> <li class="list1" draggable="true">CA Pujara</li> <li class="list1" draggable="true">CH Gayle</li> <li class="list1" draggable="true">CH Morris</li> <li class="list1" draggable="true">CJ Anderson</li> <li class="list1" draggable="true">CJ Dala</li> <li class="list1" draggable="true">CJ Ferguson</li> <li class="list1" draggable="true">CJ Green</li> <li class="list1" draggable="true">CJ Jordan</li> <li class="list1" draggable="true">CJ McKay</li> <li class="list1" draggable="true">CK Kapugedera</li> <li class="list1" draggable="true">CK Langeveldt</li> <li class="list1" draggable="true">CL White</li> <li class="list1" draggable="true">CM Gautam</li> <li class="list1" draggable="true">CR Brathwaite</li> <li class="list1" draggable="true">CR Woakes</li> <li class="list1" draggable="true">CRD Fernando</li> <li class="list1" draggable="true">CV Varun</li> <li class="list1" draggable="true">D Brevis</li> <li class="list1" draggable="true">D Ferreira</li> <li class="list1" draggable="true">D Jansen</li> <li class="list1" draggable="true">D Kalyankrishna</li> <li class="list1" draggable="true">D Padikkal</li> <li class="list1" draggable="true">D Pretorius</li> <li class="list1" draggable="true">D Salunkhe</li> <li class="list1" draggable="true">D Wiese</li> <li class="list1" draggable="true">D du Preez</li> <li class="list1" draggable="true">DA Miller</li> <li class="list1" draggable="true">DA Warner</li> <li class="list1" draggable="true">DAJ Bracewell</li> <li class="list1" draggable="true">DB Das</li> <li class="list1" draggable="true">DB Ravi Teja</li> <li class="list1" draggable="true">DE Bollinger</li> <li class="list1" draggable="true">DG Nalkande</li> <li class="list1" draggable="true">DH Yagnik</li> <li class="list1" draggable="true">DJ Bravo</li> <li class="list1" draggable="true">DJ Harris</li> <li class="list1" draggable="true">DJ Hooda</li> <li class="list1" draggable="true">DJ Hussey</li> <li class="list1" draggable="true">DJ Jacobs</li> <li class="list1" draggable="true">DJ Malan</li> <li class="list1" draggable="true">DJ Mitchell</li> <li class="list1" draggable="true">DJ Muthuswami</li> <li class="list1" draggable="true">DJ Thornely</li> <li class="list1" draggable="true">DJ Willey</li> <li class="list1" draggable="true">DJG Sammy</li> <li class="list1" draggable="true">DJM Short</li> <li class="list1" draggable="true">DL Chahar</li> <li class="list1" draggable="true">DL Vettori</li> <li class="list1" draggable="true">DM Bravo</li> <li class="list1" draggable="true">DNT Zoysa</li> <li class="list1" draggable="true">DP Conway</li> <li class="list1" draggable="true">DP Nannes</li> <li class="list1" draggable="true">DP Vijaykumar</li> <li class="list1" draggable="true">DPMD Jayawardene</li> <li class="list1" draggable="true">DR Martyn</li> <li class="list1" draggable="true">DR Sams</li> <li class="list1" draggable="true">DR Shorey</li> <li class="list1" draggable="true">DR Smith</li> <li class="list1" draggable="true">DS Kulkarni</li> <li class="list1" draggable="true">DS Lehmann</li> <li class="list1" draggable="true">DT Christian</li> <li class="list1" draggable="true">DT Patil</li> <li class="list1" draggable="true">DW Steyn</li> <li class="list1" draggable="true">Dhruv Jurel</li> <li class="list1" draggable="true">E Lewis</li> <li class="list1" draggable="true">EJG Morgan</li> <li class="list1" draggable="true">ER Dwivedi</li> <li class="list1" draggable="true">F Behardien</li> <li class="list1" draggable="true">F du Plessis</li> <li class="list1" draggable="true">FA Allen</li> <li class="list1" draggable="true">FH Edwards</li> <li class="list1" draggable="true">FY Fazal</li> <li class="list1" draggable="true">Fazalhaq Farooqi</li> <li class="list1" draggable="true">G Coetzee</li> <li class="list1" draggable="true">G Gambhir</li> <li class="list1" draggable="true">GB Hogg</li> <li class="list1" draggable="true">GC Smith</li> <li class="list1" draggable="true">GC Viljoen</li> <li class="list1" draggable="true">GD McGrath</li> <li class="list1" draggable="true">GD Phillips</li> <li class="list1" draggable="true">GH Vihari</li> <li class="list1" draggable="true">GHS Garton</li> <li class="list1" draggable="true">GJ Bailey</li> <li class="list1" draggable="true">GJ Maxwell</li> <li class="list1" draggable="true">GR Napier</li> <li class="list1" draggable="true">GS Sandhu</li> <li class="list1" draggable="true">Gagandeep Singh</li> <li class="list1" draggable="true">Gulbadin Naib</li> <li class="list1" draggable="true">Gurkeerat Singh</li> <li class="list1" draggable="true">Gurnoor Brar</li> <li class="list1" draggable="true">H Das</li> <li class="list1" draggable="true">H Klaasen</li> <li class="list1" draggable="true">H Sharma</li> <li class="list1" draggable="true">HC Brook</li> <li class="list1" draggable="true">HE van der Dussen</li> <li class="list1" draggable="true">HF Gurney</li> <li class="list1" draggable="true">HH Gibbs</li> <li class="list1" draggable="true">HH Pandya</li> <li class="list1" draggable="true">HM Amla</li> <li class="list1" draggable="true">HR Shokeen</li> <li class="list1" draggable="true">HV Patel</li> <li class="list1" draggable="true">Harbhajan Singh</li> <li class="list1" draggable="true">Harmeet Singh</li> <li class="list1" draggable="true">Harpreet Brar</li> <li class="list1" draggable="true">Harpreet Singh</li> <li class="list1" draggable="true">Harshit Rana</li> <li class="list1" draggable="true">I Malhotra</li> <li class="list1" draggable="true">I Sharma</li> <li class="list1" draggable="true">I Udana</li> <li class="list1" draggable="true">IC Pandey</li> <li class="list1" draggable="true">IC Porel</li> <li class="list1" draggable="true">IK Pathan</li> <li class="list1" draggable="true">IR Jaggi</li> <li class="list1" draggable="true">IS Sodhi</li> <li class="list1" draggable="true">Imran Tahir</li> <li class="list1" draggable="true">Iqbal Abdulla</li> <li class="list1" draggable="true">Ishan Kishan</li> <li class="list1" draggable="true">J Arunkumar</li> <li class="list1" draggable="true">J Botha</li> <li class="list1" draggable="true">J Fraser-McGurk</li> <li class="list1" draggable="true">J Little</li> <li class="list1" draggable="true">J Suchith</li> <li class="list1" draggable="true">J Syed Mohammad</li> <li class="list1" draggable="true">J Theron</li> <li class="list1" draggable="true">J Yadav</li> <li class="list1" draggable="true">JA Morkel</li> <li class="list1" draggable="true">JA Richardson</li> <li class="list1" draggable="true">JC Archer</li> <li class="list1" draggable="true">JC Buttler</li> <li class="list1" draggable="true">JD Ryder</li> <li class="list1" draggable="true">JD Unadkat</li> <li class="list1" draggable="true">JDP Oram</li> <li class="list1" draggable="true">JDS Neesham</li> <li class="list1" draggable="true">JE Root</li> <li class="list1" draggable="true">JE Taylor</li> <li class="list1" draggable="true">JEC Franklin</li> <li class="list1" draggable="true">JH Kallis</li> <li class="list1" draggable="true">JJ Bumrah</li> <li class="list1" draggable="true">JJ Roy</li> <li class="list1" draggable="true">JJ van der Wath</li> <li class="list1" draggable="true">JL Denly</li> <li class="list1" draggable="true">JL Pattinson</li> <li class="list1" draggable="true">JM Bairstow</li> <li class="list1" draggable="true">JM Kemp</li> <li class="list1" draggable="true">JM Sharma</li> <li class="list1" draggable="true">JO Holder</li> <li class="list1" draggable="true">JP Behrendorff</li> <li class="list1" draggable="true">JP Duminy</li> <li class="list1" draggable="true">JP Faulkner</li> <li class="list1" draggable="true">JPR Scantlebury-Searles</li> <li class="list1" draggable="true">JR Hazlewood</li> <li class="list1" draggable="true">JR Hopes</li> <li class="list1" draggable="true">JR Philippe</li> <li class="list1" draggable="true">JW Hastings</li> <li class="list1" draggable="true">Jalaj S Saxena</li> <li class="list1" draggable="true">Jaskaran Singh</li> <li class="list1" draggable="true">Joginder Sharma</li> <li class="list1" draggable="true">K Goel</li> <li class="list1" draggable="true">K Gowtham</li> <li class="list1" draggable="true">K Kartikeya</li> <li class="list1" draggable="true">K Khejroliya</li> <li class="list1" draggable="true">K Rabada</li> <li class="list1" draggable="true">K Santokie</li> <li class="list1" draggable="true">K Upadhyay</li> <li class="list1" draggable="true">K Yadav</li> <li class="list1" draggable="true">KA Jamieson</li> <li class="list1" draggable="true">KA Maharaj</li> <li class="list1" draggable="true">KA Pollard</li> <li class="list1" draggable="true">KAJ Roach</li> <li class="list1" draggable="true">KB Arun Karthik</li> <li class="list1" draggable="true">KC Cariappa</li> <li class="list1" draggable="true">KC Sangakkara</li> <li class="list1" draggable="true">KD Karthik</li> <li class="list1" draggable="true">KH Devdhar</li> <li class="list1" draggable="true">KH Pandya</li> <li class="list1" draggable="true">KJ Abbott</li> <li class="list1" draggable="true">KK Ahmed</li> <li class="list1" draggable="true">KK Cooper</li> <li class="list1" draggable="true">KK Nair</li> <li class="list1" draggable="true">KL Nagarkoti</li> <li class="list1" draggable="true">KL Rahul</li> <li class="list1" draggable="true">KM Asif</li> <li class="list1" draggable="true">KM Jadhav</li> <li class="list1" draggable="true">KMA Paul</li> <li class="list1" draggable="true">KMDN Kulasekara</li> <li class="list1" draggable="true">KP Appanna</li> <li class="list1" draggable="true">KP Pietersen</li> <li class="list1" draggable="true">KR Mayers</li> <li class="list1" draggable="true">KR Sen</li> <li class="list1" draggable="true">KS Bharat</li> <li class="list1" draggable="true">KS Sharma</li> <li class="list1" draggable="true">KS Williamson</li> <li class="list1" draggable="true">KT Maphaka</li> <li class="list1" draggable="true">KV Sharma</li> <li class="list1" draggable="true">KW Richardson</li> <li class="list1" draggable="true">Kamran Akmal</li> <li class="list1" draggable="true">Kamran Khan</li> <li class="list1" draggable="true">Karanveer Singh</li> <li class="list1" draggable="true">Kartik Tyagi</li> <li class="list1" draggable="true">Kuldeep Yadav</li> <li class="list1" draggable="true">Kumar Kushagra</li> <li class="list1" draggable="true">L Ablish</li> <li class="list1" draggable="true">L Balaji</li> <li class="list1" draggable="true">L Ngidi</li> <li class="list1" draggable="true">L Ronchi</li> <li class="list1" draggable="true">L Wood</li> <li class="list1" draggable="true">LA Carseldine</li> <li class="list1" draggable="true">LA Pomersbach</li> <li class="list1" draggable="true">LB Williams</li> <li class="list1" draggable="true">LE Plunkett</li> <li class="list1" draggable="true">LH Ferguson</li> <li class="list1" draggable="true">LI Meriwala</li> <li class="list1" draggable="true">LJ Wright</li> <li class="list1" draggable="true">LMP Simmons</li> <li class="list1" draggable="true">LPC Silva</li> <li class="list1" draggable="true">LR Shukla</li> <li class="list1" draggable="true">LRPL Taylor</li> <li class="list1" draggable="true">LS Livingstone</li> <li class="list1" draggable="true">Lalit Yadav</li> <li class="list1" draggable="true">Liton Das</li> <li class="list1" draggable="true">M Ashwin</li> <li class="list1" draggable="true">M Jansen</li> <li class="list1" draggable="true">M Kaif</li> <li class="list1" draggable="true">M Kartik</li> <li class="list1" draggable="true">M Klinger</li> <li class="list1" draggable="true">M Manhas</li> <li class="list1" draggable="true">M Markande</li> <li class="list1" draggable="true">M Morkel</li> <li class="list1" draggable="true">M Muralitharan</li> <li class="list1" draggable="true">M Ntini</li> <li class="list1" draggable="true">M Pathirana</li> <li class="list1" draggable="true">M Prasidh Krishna</li> <li class="list1" draggable="true">M Rawat</li> <li class="list1" draggable="true">M Shahrukh Khan</li> <li class="list1" draggable="true">M Siddharth</li> <li class="list1" draggable="true">M Theekshana</li> <li class="list1" draggable="true">M Vijay</li> <li class="list1" draggable="true">M Vohra</li> <li class="list1" draggable="true">M de Lange</li> <li class="list1" draggable="true">MA Agarwal</li> <li class="list1" draggable="true">MA Khote</li> <li class="list1" draggable="true">MA Starc</li> <li class="list1" draggable="true">MA Wood</li> <li class="list1" draggable="true">MB Parmar</li> <li class="list1" draggable="true">MC Henriques</li> <li class="list1" draggable="true">MC Juneja</li> <li class="list1" draggable="true">MD Mishra</li> <li class="list1" draggable="true">MD Shanaka</li> <li class="list1" draggable="true">MDKJ Perera</li> <li class="list1" draggable="true">MEK Hussey</li> <li class="list1" draggable="true">MF Maharoof</li> <li class="list1" draggable="true">MG Bracewell</li> <li class="list1" draggable="true">MG Johnson</li> <li class="list1" draggable="true">MG Neser</li> <li class="list1" draggable="true">MJ Clarke</li> <li class="list1" draggable="true">MJ Guptill</li> <li class="list1" draggable="true">MJ Henry</li> <li class="list1" draggable="true">MJ Lumb</li> <li class="list1" draggable="true">MJ McClenaghan</li> <li class="list1" draggable="true">MJ Santner</li> <li class="list1" draggable="true">MJ Suthar</li> <li class="list1" draggable="true">MK Lomror</li> <li class="list1" draggable="true">MK Pandey</li> <li class="list1" draggable="true">MK Tiwary</li> <li class="list1" draggable="true">ML Hayden</li> <li class="list1" draggable="true">MM Ali</li> <li class="list1" draggable="true">MM Patel</li> <li class="list1" draggable="true">MM Sharma</li> <li class="list1" draggable="true">MN Samuels</li> <li class="list1" draggable="true">MN van Wyk</li> <li class="list1" draggable="true">MP Stoinis</li> <li class="list1" draggable="true">MP Yadav</li> <li class="list1" draggable="true">MR Marsh</li> <li class="list1" draggable="true">MS Bisla</li> <li class="list1" draggable="true">MS Dhoni</li> <li class="list1" draggable="true">MS Gony</li> <li class="list1" draggable="true">MS Wade</li> <li class="list1" draggable="true">MV Boucher</li> <li class="list1" draggable="true">MW Short</li> <li class="list1" draggable="true">Mandeep Singh</li> <li class="list1" draggable="true">Mashrafe Mortaza</li> <li class="list1" draggable="true">Mayank Dagar</li> <li class="list1" draggable="true">Milind Kumar</li> <li class="list1" draggable="true">Misbah-ul-Haq</li> <li class="list1" draggable="true">Mohammad Ashraful</li> <li class="list1" draggable="true">Mohammad Asif</li> <li class="list1" draggable="true">Mohammad Hafeez</li> <li class="list1" draggable="true">Mohammad Nabi</li> <li class="list1" draggable="true">Mohammed Shami</li> <li class="list1" draggable="true">Mohammed Siraj</li> <li class="list1" draggable="true">Mohit Rathee</li> <li class="list1" draggable="true">Mohsin Khan</li> <li class="list1" draggable="true">Monu Kumar</li> <li class="list1" draggable="true">Mujeeb Ur Rahman</li> <li class="list1" draggable="true">Mukesh Choudhary</li> <li class="list1" draggable="true">Mukesh Kumar</li> <li class="list1" draggable="true">Mustafizur Rahman</li> <li class="list1" draggable="true">N Burger</li> <li class="list1" draggable="true">N Jagadeesan</li> <li class="list1" draggable="true">N Pooran</li> <li class="list1" draggable="true">N Rana</li> <li class="list1" draggable="true">N Saini</li> <li class="list1" draggable="true">N Thushara</li> <li class="list1" draggable="true">N Wadhera</li> <li class="list1" draggable="true">NA Saini</li> <li class="list1" draggable="true">NB Singh</li> <li class="list1" draggable="true">ND Doshi</li> <li class="list1" draggable="true">NJ Maddinson</li> <li class="list1" draggable="true">NJ Rimmington</li> <li class="list1" draggable="true">NK Patel</li> <li class="list1" draggable="true">NL McCullum</li> <li class="list1" draggable="true">NLTC Perera</li> <li class="list1" draggable="true">NM Coulter-Nile</li> <li class="list1" draggable="true">NS Naik</li> <li class="list1" draggable="true">NT Ellis</li> <li class="list1" draggable="true">NV Ojha</li> <li class="list1" draggable="true">Naman Dhir</li> <li class="list1" draggable="true">Navdeep Saini</li> <li class="list1" draggable="true">Naveen-ul-Haq</li> <li class="list1" draggable="true">Nithish Kumar Reddy</li> <li class="list1" draggable="true">Noor Ahmad</li> <li class="list1" draggable="true">O Thomas</li> <li class="list1" draggable="true">OA Shah</li> <li class="list1" draggable="true">OC McCoy</li> <li class="list1" draggable="true">OF Smith</li> <li class="list1" draggable="true">P Amarnath</li> <li class="list1" draggable="true">P Awana</li> <li class="list1" draggable="true">P Chopra</li> <li class="list1" draggable="true">P Dogra</li> <li class="list1" draggable="true">P Dubey</li> <li class="list1" draggable="true">P Kumar</li> <li class="list1" draggable="true">P Negi</li> <li class="list1" draggable="true">P Parameswaran</li> <li class="list1" draggable="true">P Prasanth</li> <li class="list1" draggable="true">P Ray Barman</li> <li class="list1" draggable="true">P Sahu</li> <li class="list1" draggable="true">P Simran Singh</li> <li class="list1" draggable="true">P Suyal</li> <li class="list1" draggable="true">PA Patel</li> <li class="list1" draggable="true">PA Reddy</li> <li class="list1" draggable="true">PBB Rajapaksa</li> <li class="list1" draggable="true">PC Valthaty</li> <li class="list1" draggable="true">PD Collingwood</li> <li class="list1" draggable="true">PD Salt</li> <li class="list1" draggable="true">PH Solanki</li> <li class="list1" draggable="true">PJ Cummins</li> <li class="list1" draggable="true">PJ Sangwan</li> <li class="list1" draggable="true">PK Garg</li> <li class="list1" draggable="true">PM Sarvesh Kumar</li> <li class="list1" draggable="true">PN Mankad</li> <li class="list1" draggable="true">PP Chawla</li> <li class="list1" draggable="true">PP Ojha</li> <li class="list1" draggable="true">PP Shaw</li> <li class="list1" draggable="true">PR Shah</li> <li class="list1" draggable="true">PSP Handscomb</li> <li class="list1" draggable="true">PV Tambe</li> <li class="list1" draggable="true">PVD Chameera</li> <li class="list1" draggable="true">PWH de Silva</li> <li class="list1" draggable="true">Pankaj Singh</li> <li class="list1" draggable="true">Parvez Rasool</li> <li class="list1" draggable="true">Q de Kock</li> <li class="list1" draggable="true">R Ashwin</li> <li class="list1" draggable="true">R Bhatia</li> <li class="list1" draggable="true">R Bishnoi</li> <li class="list1" draggable="true">R Dhawan</li> <li class="list1" draggable="true">R Dravid</li> <li class="list1" draggable="true">R Goyal</li> <li class="list1" draggable="true">R McLaren</li> <li class="list1" draggable="true">R Ninan</li> <li class="list1" draggable="true">R Parag</li> <li class="list1" draggable="true">R Powell</li> <li class="list1" draggable="true">R Rampaul</li> <li class="list1" draggable="true">R Ravindra</li> <li class="list1" draggable="true">R Sai Kishore</li> <li class="list1" draggable="true">R Sanjay Yadav</li> <li class="list1" draggable="true">R Sathish</li> <li class="list1" draggable="true">R Sharma</li> <li class="list1" draggable="true">R Shepherd</li> <li class="list1" draggable="true">R Shukla</li> <li class="list1" draggable="true">R Tewatia</li> <li class="list1" draggable="true">R Vinay Kumar</li> <li class="list1" draggable="true">RA Bawa</li> <li class="list1" draggable="true">RA Jadeja</li> <li class="list1" draggable="true">RA Shaikh</li> <li class="list1" draggable="true">RA Tripathi</li> <li class="list1" draggable="true">RD Chahar</li> <li class="list1" draggable="true">RD Gaikwad</li> <li class="list1" draggable="true">RE Levi</li> <li class="list1" draggable="true">RE van der Merwe</li> <li class="list1" draggable="true">RG More</li> <li class="list1" draggable="true">RG Sharma</li> <li class="list1" draggable="true">RJ Gleeson</li> <li class="list1" draggable="true">RJ Harris</li> <li class="list1" draggable="true">RJ Peterson</li> <li class="list1" draggable="true">RJ Quiney</li> <li class="list1" draggable="true">RJW Topley</li> <li class="list1" draggable="true">RK Bhui</li> <li class="list1" draggable="true">RK Singh</li> <li class="list1" draggable="true">RM Patidar</li> <li class="list1" draggable="true">RN ten Doeschate</li> <li class="list1" draggable="true">RP Meredith</li> <li class="list1" draggable="true">RP Singh</li> <li class="list1" draggable="true">RR Bhatkal</li> <li class="list1" draggable="true">RR Bose</li> <li class="list1" draggable="true">RR Pant</li> <li class="list1" draggable="true">RR Powar</li> <li class="list1" draggable="true">RR Raje</li> <li class="list1" draggable="true">RR Rossouw</li> <li class="list1" draggable="true">RR Sarwan</li> <li class="list1" draggable="true">RS Bopara</li> <li class="list1" draggable="true">RS Gavaskar</li> <li class="list1" draggable="true">RS Hangargekar</li> <li class="list1" draggable="true">RS Sodhi</li> <li class="list1" draggable="true">RT Ponting</li> <li class="list1" draggable="true">RV Gomez</li> <li class="list1" draggable="true">RV Patel</li> <li class="list1" draggable="true">RV Uthappa</li> <li class="list1" draggable="true">RW Price</li> <li class="list1" draggable="true">Rahmanullah Gurbaz</li> <li class="list1" draggable="true">Ramandeep Singh</li> <li class="list1" draggable="true">Rashid Khan</li> <li class="list1" draggable="true">Rasikh Salam</li> <li class="list1" draggable="true">Ravi Bishnoi</li> <li class="list1" draggable="true">S Anirudha</li> <li class="list1" draggable="true">S Aravind</li> <li class="list1" draggable="true">S Badree</li> <li class="list1" draggable="true">S Badrinath</li> <li class="list1" draggable="true">S Chanderpaul</li> <li class="list1" draggable="true">S Dhawan</li> <li class="list1" draggable="true">S Dube</li> <li class="list1" draggable="true">S Gopal</li> <li class="list1" draggable="true">S Joseph</li> <li class="list1" draggable="true">S Kaul</li> <li class="list1" draggable="true">S Kaushik</li> <li class="list1" draggable="true">S Ladda</li> <li class="list1" draggable="true">S Lamichhane</li> <li class="list1" draggable="true">S Midhun</li> <li class="list1" draggable="true">S Nadeem</li> <li class="list1" draggable="true">S Narwal</li> <li class="list1" draggable="true">S Rana</li> <li class="list1" draggable="true">S Randiv</li> <li class="list1" draggable="true">S Sandeep Warrier</li> <li class="list1" draggable="true">S Sohal</li> <li class="list1" draggable="true">S Sreesanth</li> <li class="list1" draggable="true">S Sriram</li> <li class="list1" draggable="true">S Tyagi</li> <li class="list1" draggable="true">S Vidyut</li> <li class="list1" draggable="true">SA Abbott</li> <li class="list1" draggable="true">SA Asnodkar</li> <li class="list1" draggable="true">SA Yadav</li> <li class="list1" draggable="true">SB Bangar</li> <li class="list1" draggable="true">SB Dubey</li> <li class="list1" draggable="true">SB Jakati</li> <li class="list1" draggable="true">SB Joshi</li> <li class="list1" draggable="true">SB Styris</li> <li class="list1" draggable="true">SB Wagh</li> <li class="list1" draggable="true">SC Ganguly</li> <li class="list1" draggable="true">SC Kuggeleijn</li> <li class="list1" draggable="true">SD Chitnis</li> <li class="list1" draggable="true">SD Hope</li> <li class="list1" draggable="true">SD Lad</li> <li class="list1" draggable="true">SE Bond</li> <li class="list1" draggable="true">SE Marsh</li> <li class="list1" draggable="true">SE Rutherford</li> <li class="list1" draggable="true">SH Johnson</li> <li class="list1" draggable="true">SJ Srivastava</li> <li class="list1" draggable="true">SK Raina</li> <li class="list1" draggable="true">SK Rasheed</li> <li class="list1" draggable="true">SK Trivedi</li> <li class="list1" draggable="true">SK Warne</li> <li class="list1" draggable="true">SL Malinga</li> <li class="list1" draggable="true">SM Boland</li> <li class="list1" draggable="true">SM Curran</li> <li class="list1" draggable="true">SM Harwood</li> <li class="list1" draggable="true">SM Katich</li> <li class="list1" draggable="true">SM Pollock</li> <li class="list1" draggable="true">SMSM Senanayake</li> <li class="list1" draggable="true">SN Khan</li> <li class="list1" draggable="true">SN Thakur</li> <li class="list1" draggable="true">SO Hetmyer</li> <li class="list1" draggable="true">SP Fleming</li> <li class="list1" draggable="true">SP Goswami</li> <li class="list1" draggable="true">SP Jackson</li> <li class="list1" draggable="true">SP Narine</li> <li class="list1" draggable="true">SPD Smith</li> <li class="list1" draggable="true">SR Tendulkar</li> <li class="list1" draggable="true">SR Watson</li> <li class="list1" draggable="true">SS Agarwal</li> <li class="list1" draggable="true">SS Cottrell</li> <li class="list1" draggable="true">SS Iyer</li> <li class="list1" draggable="true">SS Mundhe</li> <li class="list1" draggable="true">SS Prabhudessai</li> <li class="list1" draggable="true">SS Sarkar</li> <li class="list1" draggable="true">SS Shaikh</li> <li class="list1" draggable="true">SS Tiwary</li> <li class="list1" draggable="true">SSB Magala</li> <li class="list1" draggable="true">ST Jayasuriya</li> <li class="list1" draggable="true">STR Binny</li> <li class="list1" draggable="true">SV Samson</li> <li class="list1" draggable="true">SW Billings</li> <li class="list1" draggable="true">SW Tait</li> <li class="list1" draggable="true">SZ Mulani</li> <li class="list1" draggable="true">Sachin Baby</li> <li class="list1" draggable="true">Salman Butt</li> <li class="list1" draggable="true">Sameer Rizvi</li> <li class="list1" draggable="true">Sandeep Sharma</li> <li class="list1" draggable="true">Sanvir Singh</li> <li class="list1" draggable="true">Saurav Chauhan</li> <li class="list1" draggable="true">Shahbaz Ahmed</li> <li class="list1" draggable="true">Shahid Afridi</li> <li class="list1" draggable="true">Shakib Al Hasan</li> <li class="list1" draggable="true">Shashank Singh</li> <li class="list1" draggable="true">Shivam Mavi</li> <li class="list1" draggable="true">Shivam Sharma</li> <li class="list1" draggable="true">Shivam Singh</li> <li class="list1" draggable="true">Shoaib Ahmed</li> <li class="list1" draggable="true">Shoaib Akhtar</li> <li class="list1" draggable="true">Shoaib Malik</li> <li class="list1" draggable="true">Shubman Gill</li> <li class="list1" draggable="true">Sikandar Raza</li> <li class="list1" draggable="true">Simarjeet Singh</li> <li class="list1" draggable="true">Sohail Tanvir</li> <li class="list1" draggable="true">Sonu Yadav</li> <li class="list1" draggable="true">Subhransu Senapati</li> <li class="list1" draggable="true">Sumit Kumar</li> <li class="list1" draggable="true">Sunny Gupta</li> <li class="list1" draggable="true">Sunny Singh</li> <li class="list1" draggable="true">Suyash Sharma</li> <li class="list1" draggable="true">Swapnil Singh</li> <li class="list1" draggable="true">T Banton</li> <li class="list1" draggable="true">T Henderson</li> <li class="list1" draggable="true">T Kohler-Cadmore</li> <li class="list1" draggable="true">T Kohli</li> <li class="list1" draggable="true">T Mishra</li> <li class="list1" draggable="true">T Natarajan</li> <li class="list1" draggable="true">T Shamsi</li> <li class="list1" draggable="true">T Stubbs</li> <li class="list1" draggable="true">T Taibu</li> <li class="list1" draggable="true">T Thushara</li> <li class="list1" draggable="true">TA Boult</li> <li class="list1" draggable="true">TD Paine</li> <li class="list1" draggable="true">TG Southee</li> <li class="list1" draggable="true">TH David</li> <li class="list1" draggable="true">TK Curran</li> <li class="list1" draggable="true">TL Seifert</li> <li class="list1" draggable="true">TL Suman</li> <li class="list1" draggable="true">TM Dilshan</li> <li class="list1" draggable="true">TM Head</li> <li class="list1" draggable="true">TM Srivastava</li> <li class="list1" draggable="true">TP Sudhindra</li> <li class="list1" draggable="true">TR Birt</li> <li class="list1" draggable="true">TS Mills</li> <li class="list1" draggable="true">TU Deshpande</li> <li class="list1" draggable="true">Tanay Thyagarajan</li> <li class="list1" draggable="true">Tanush Kotian</li> <li class="list1" draggable="true">Tejas Baroka</li> <li class="list1" draggable="true">Tilak Varma</li> <li class="list1" draggable="true">U Kaul</li> <li class="list1" draggable="true">UA Birla</li> <li class="list1" draggable="true">UBT Chand</li> <li class="list1" draggable="true">UT Khawaja</li> <li class="list1" draggable="true">UT Yadav</li> <li class="list1" draggable="true">Umar Gul</li> <li class="list1" draggable="true">Umran Malik</li> <li class="list1" draggable="true">V Kaverappa</li> <li class="list1" draggable="true">V Kohli</li> <li class="list1" draggable="true">V Pratap Singh</li> <li class="list1" draggable="true">V Sehwag</li> <li class="list1" draggable="true">V Shankar</li> <li class="list1" draggable="true">V Viyaskanth</li> <li class="list1" draggable="true">VG Arora</li> <li class="list1" draggable="true">VH Zol</li> <li class="list1" draggable="true">VR Aaron</li> <li class="list1" draggable="true">VR Iyer</li> <li class="list1" draggable="true">VRV Singh</li> <li class="list1" draggable="true">VS Malik</li> <li class="list1" draggable="true">VS Yeligati</li> <li class="list1" draggable="true">VVS Laxman</li> <li class="list1" draggable="true">VY Mahesh</li> <li class="list1" draggable="true">Vijaykumar Vyshak</li> <li class="list1" draggable="true">Virat Singh</li> <li class="list1" draggable="true">Vishnu Vinod</li> <li class="list1" draggable="true">Vivrant Sharma</li> <li class="list1" draggable="true">W Jaffer</li> <li class="list1" draggable="true">WA Mota</li> <li class="list1" draggable="true">WD Parnell</li> <li class="list1" draggable="true">WG Jacks</li> <li class="list1" draggable="true">WP Saha</li> <li class="list1" draggable="true">WPUJC Vaas</li> <li class="list1" draggable="true">Washington Sundar</li> <li class="list1" draggable="true">X Thalaivan Sargunam</li> <li class="list1" draggable="true">Y Gnaneswara Rao</li> <li class="list1" draggable="true">Y Nagar</li> <li class="list1" draggable="true">Y Prithvi Raj</li> <li class="list1" draggable="true">Y Venugopal Rao</li> <li class="list1" draggable="true">YA Abdulla</li> <li class="list1" draggable="true">YBK Jaiswal</li> <li class="list1" draggable="true">YK Pathan</li> <li class="list1" draggable="true">YS Chahal</li> <li class="list1" draggable="true">YV Dhull</li> <li class="list1" draggable="true">YV Takawale</li> <li class="list1" draggable="true">Yash Dayal</li> <li class="list1" draggable="true">Yash Thakur</li> <li class="list1" draggable="true">Yashpal Singh</li> <li class="list1" draggable="true">Younis Khan</li> <li class="list1" draggable="true">Yudhvir Singh</li> <li class="list1" draggable="true">Yuvraj Singh</li> <li class="list1" draggable="true">Z Khan</li>
+     
+                </ul>
+            </div>
+
+          
+
+
+        </div>
+    <script>
+        let lists = document.getElementsByClassName("list1");
+        let rightBox = document.getElementById("right");
+        let right1Box = document.getElementById("right1");
+        let leftBox = document.getElementById("left");
+        let players_li = ["",""]
+    
+
+        for(list of lists){
+            list.addEventListener("dragstart", function(e){
+                let selected = e.target;
+
+                rightBox.addEventListener("dragover",function(e){
+                    e.preventDefault();
+                });
+                rightBox.addEventListener("drop",function(e){
+                    rightBox.appendChild(selected);
+                    selected = null;
+                    var right_box_val = document.querySelector('#right .list1').innerHTML;
+                    
+                    players_li[0]=right_box_val;
+        sendDataToPython({
+          value:players_li,
+          dataType: "json",});
+        });
+                right1Box.addEventListener("dragover",function(e){
+                    e.preventDefault();
+                });
+                right1Box.addEventListener("drop",function(e){
+                    right1Box.appendChild(selected);
+                    selected = null;
+                    var right_box_val1 = document.querySelector('#right1 .list1').innerHTML;
+                    
+                    players_li[1]=right_box_val1;
+        sendDataToPython({
+          value:players_li,
+          dataType: "json",});
+        });
+                
+        leftBox.addEventListener("dragover",function(e){
+                    e.preventDefault();
+                });
+        leftBox.addEventListener("drop",function(e){
+                    leftBox.appendChild(selected);
+                    selected = null;
+                });
+            })
+
+      }
+        
+
+        function myFunction() {
+  let input = document.getElementById('myInput').value
+  input = input.toLowerCase();
+  let x = document.querySelectorAll('#list .list1');
+
+  for (i = 0; i < x.length; i++) {
+    if (!x[i].innerHTML.toLowerCase().includes(input)) {
+      x[i].style.display = "none";
+    }
+    else {
+      x[i].style.display = "list-item";
+    }
+  }
+}
+
+      // ----------------------------------------------------
+      // Just copy/paste these functions as-is:
+
+      function sendMessageToStreamlitClient(type, data) {
+        var outData = Object.assign({
+          isStreamlitMessage: true,
+          type: type,
+        }, data);
+        window.parent.postMessage(outData, "*");
+      }
+
+      function init() {
+        sendMessageToStreamlitClient("streamlit:componentReady", {apiVersion: 1});
+      }
+
+      function setFrameHeight(height) {
+        sendMessageToStreamlitClient("streamlit:setFrameHeight", {height: height});
+      }
+
+      // The `data` argument can be any JSON-serializable value.
+      function sendDataToPython(data) {
+        sendMessageToStreamlitClient("streamlit:setComponentValue", data);
+      }
+
+      // ----------------------------------------------------
+      // Now modify this part of the code to fit your needs:
+
+      var myInput = document.getElementById("myInput");
+
+      
+   
+
+      // data is any JSON-serializable value you sent from Python,
+      // and it's already deserialized for you.
+      function onDataFromPython(event) {
+        if (event.data.type !== "streamlit:render") return;
+        myInput.value = event.data.args.my_input_value;  // Access values sent from Python here!
+      }
+
+
+
+      // Hook things up!
+      window.addEventListener("message", onDataFromPython);
+      init();
+
+      // Hack to autoset the iframe height.
+      window.addEventListener("load", function() {
+        window.setTimeout(function() {
+          setFrameHeight(document.documentElement.clientHeight)
+        }, 0);
+      });
+
+      // Optionally, if the automatic height computation fails you, give this component a height manually
+      // by commenting out below:
+      // setFrameHeight(200);
+    </script>
+  </body>
+</html>
