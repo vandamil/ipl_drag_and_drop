@@ -37,7 +37,7 @@ class BowlerAttributes(HeadToHeadBowling):
 
 
         balls_between_wickets = wicket_indices.to_series().diff().dropna()
-        return f"{balls_between_wickets.mean():.0f}"
+        return round(balls_between_wickets.mean(),2)
 
 
 
