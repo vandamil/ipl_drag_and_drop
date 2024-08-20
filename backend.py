@@ -40,7 +40,6 @@ class BowlerAttributes(HeadToHeadBowling):
         return round(balls_between_wickets.mean(),2)
 
 
-
     def get_bowled_wickets(self):
         return len(self.dataframe[self.dataframe['dismissal_kind'] == "bowled"])
 
@@ -51,11 +50,6 @@ class BowlerAttributes(HeadToHeadBowling):
         return len(self.dataframe[self.dataframe['dismissal_kind'] == "stumped"])
 
     def bowling_attributes(self):
-        # self.get_wickets(),self.get_run_rate():.2f
-        # self.get_avg_balls_per_wicket()
-        # self.get_bowled_wickets()
-        # self.get_caught_wickets()
-        # self.get_stumped_wickets()
 
         data = pd.DataFrame(
             {
@@ -66,13 +60,6 @@ class BowlerAttributes(HeadToHeadBowling):
 
         return data
 
-        # return f"""
-        # Total wickets: {self.get_wickets()} \n
-        # Average runs per over: {self.get_run_rate():.2f} \n
-        # Average Balls per wicket: {self.get_avg_balls_per_wicket()} \n
-        # Bowled wickets: {self.get_bowled_wickets()} \n
-        # Caught wickets: {self.get_caught_wickets()} \n
-        # Stumped wickets: {self.get_stumped_wickets()}"""
 
 class BatsmanAttributes(HeadToHeadBowling):
     def __init__(self, dataframe):
@@ -114,16 +101,6 @@ class BatsmanAttributes(HeadToHeadBowling):
             }
         )
         return data
-        # return f"""
-        # Total runs: {self.total_runs} \n
-        # Batting avg: {self.batting_avg():.2f} \n
-        # Strike rate: {self.strike_rate:.2f} \n
-        # Extra runs: {self.extra_runs} \n
-        # Singles: {self.get_singles()} \n
-        # Doubles: {self.get_doubles()} \n
-        # Triples: {self.get_triples()} \n
-        # Fours: {self.get_fours()} \n
-        # Sixes: {self.get_sixes()}"""
 
 class FieldingAttributes:
     def __init__(self, dataframe):
@@ -142,8 +119,3 @@ class FieldingAttributes:
         )
 
         return data
-        # return f"""
-        # Total dismissals: {self.num_fielding_dismissals} \n
-        # Catches: {self.catches} \n
-        # Run outs: {self.run_outs} \n
-        # Stumpings: {self.stumpings}"""
